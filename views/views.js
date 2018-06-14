@@ -61,7 +61,7 @@ var practice = {
         viewTemplate = $("#practice-view").html();
         $('#main').html(Mustache.render(viewTemplate, {
         title: this.title,
-        question: exp.trial_info.practice_trials[CT].question,
+        question: exp.trial_info.practice_trials[CT].statements,
         option1: exp.responses[0],
         option2: exp.responses[1],
         option3:  exp.responses[2]
@@ -75,7 +75,7 @@ var practice = {
             trial_data = {
                 trial_type: "practice",
                 trial_number: CT+1,
-                question: exp.trial_info.practice_trials[CT].question,
+                question: exp.trial_info.practice_trials[CT].statements,
                 option1: exp.responses[0],
                 option2: exp.responses[1],
                 option3:  exp.responses[2],
@@ -88,7 +88,7 @@ var practice = {
         });
 
     },
-    trials: 2
+    trials: 5
 };
 
 var beginMainExp = {

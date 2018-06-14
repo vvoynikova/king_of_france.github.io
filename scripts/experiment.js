@@ -22,8 +22,8 @@ exp.customize = function() {
     this.trial_info.main_trials = _.shuffle(main_trials);
     this.trial_info.practice_trials = practice_trials;
 
-    this.response = _.shuffle(["TRUE", "FALSE", "CAN'T SAY"]);
-    
+    this.responses = _.shuffle(["TRUE", "FALSE", "CAN'T SAY"]);
+
 
 
     // adds progress bars to the views listed
