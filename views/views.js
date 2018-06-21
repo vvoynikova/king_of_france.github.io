@@ -93,12 +93,33 @@ var practice = {
 
 var beginMainExp = {
     name: 'beginMainExp',
-    "text": "When you are ready click on the button to start the main experiment",
+    "text": "When you are ready click on the button to start the main experiment.",
     // render function renders the view
 
     render: function() {
 
         viewTemplate = $('#begin-exp-view').html();
+        $('#main').html(Mustache.render(viewTemplate, {
+            text: this.text
+        }));
+
+        // moves to the next view
+        $('#next').on('click', function(e) {
+            exp.findNextView();
+        });
+
+    },
+    trials: 1
+};
+
+var mainBreak = {
+    name: 'mainBreak',
+    "text": "You completed the first block of trials. Now you can take a short break. Continue with the next part when you are ready. This is the final part of the experiment.",
+    // render function renders the view
+
+    render: function() {
+
+        viewTemplate = $('#break-exp-view').html();
         $('#main').html(Mustache.render(viewTemplate, {
             text: this.text
         }));
@@ -122,7 +143,7 @@ var main = {
         // fill variables in view-template
         var viewTemplate = $('#main-view').html();
         $('#main').html(Mustache.render(viewTemplate, {
-            question: exp.trial_info.main_trials[CT].question,
+            question: exp.trial_info.main_trials[CT].sentence,
             option1: exp.responses[0],
             option2: exp.responses[1],
             option3:  exp.responses[2]
@@ -139,7 +160,7 @@ var main = {
             trial_data = {
                 trial_type: "mainForcedChoice",
                 trial_number: CT + 5,
-                question: exp.trial_info.main_trials[CT].question,
+                question: exp.trial_info.main_trials[CT].sentence,
                 option1: exp.responses[0],
                 option2: exp.responses[1],
                 option3:  exp.responses[2],
@@ -155,8 +176,54 @@ var main = {
         startingTime = Date.now();
 
     },
-	trials : 5
+	trials : 81
 };
+
+// Dobaveno
+var mainPart2 = {
+    name: 'mainPart2',
+    // render function renders the view
+    render : function(CT) {
+
+        // fill variables in view-template
+        var viewTemplate = $('#mainPart2-view').html();
+        $('#main').html(Mustache.render(viewTemplate, {
+            question: exp.trial_info.main_trials_part_2[CT].sentence,
+            option1: exp.responses[0],
+            option2: exp.responses[1],
+            option3:  exp.responses[2]
+        }));
+
+        // update the progress bar based on how many trials there are in this round
+        var filled = exp.currentTrialInViewCounter * (180 / exp.views_seq[exp.currentViewCounter].trials);
+        $('#filled').css('width', filled);
+
+        // event listener for buttons; when an input is selected, the response
+        // and additional information are stored in exp.trial_info
+        $('input[name=answer]').on('change', function() {
+            RT = Date.now() - startingTime; // measure RT before anything else
+            trial_data = {
+                trial_type: "mainForcedChoice",
+                trial_number: CT + 5,
+                question: exp.trial_info.main_trials_part_2[CT].sentence,
+                option1: exp.responses[0],
+                option2: exp.responses[1],
+                option3: exp.responses[2],
+
+                option_chosen: $('input[name=answer]:checked').val(),
+                RT: RT
+            };
+            exp.trial_data.push(trial_data);
+            exp.findNextView();
+        });
+
+        // record trial starting time
+        startingTime = Date.now();
+    },
+    trials : 80
+};
+
+
 
 var postTest = {
     name: 'postTest',

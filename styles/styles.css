@@ -137,7 +137,11 @@ button:focus {
     display: none;
 }
 
-.answer-container .button-answer1 {
+/*
+    button-answer-1/2/3 promeneni na button-answer-true/false/cantsay
+*/
+
+.answer-container .button-answer-true {
     background-color: #33cc33;
     border: none;
     border-radius: 2px;
@@ -154,8 +158,11 @@ button:focus {
     padding: 5px 10px;
     text-transform: uppercase;
 }
+.answer-container .button-answer-true:before {
+    content: 'TRUE';
+}
 
-.answer-container .button-answer2 {
+.answer-container .button-answer-false {
     background-color: #ff661a;
     border: none;
     border-radius: 2px;
@@ -172,8 +179,11 @@ button:focus {
     padding: 5px 10px;
     text-transform: uppercase;
 }
+.answer-container .button-answer-false:before {
+    content: 'FALSE';
+}
 
-.answer-container .button-answer3 {
+.answer-container .button-answer-cantsay {
     background-color: #ffcc00;
     border: none;
     border-radius: 2px;
@@ -189,6 +199,9 @@ button:focus {
     outline: none;
     padding: 5px 10px;
     text-transform: uppercase;
+}
+.answer-container .button-answer-cantsay:before {
+    content: "CAN'T SAY";
 }
 
 .answer-container .button-answer:hover {

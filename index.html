@@ -102,12 +102,12 @@
 		  </p>
 
 			<p class="answer-container">
-				<label for="yes" class="button-answer1">{{option1}}</label>
-				<input type="radio" name="answer" id="yes" value={{option1}} />
-				<input type="radio" name="answer" id="no" value={{option2}} />
-				<label for="no" class="button-answer2">{{option2}}</label>
-				<input type="radio" name="answer" id="maybe" value={{ option3 }} />
-				<label for="maybe" class="button-answer3">{{ option3 }}</label>
+				<label for="button1-id" class="button-answer-{{option1}}"></label>
+				<input type="radio" name="answer" id="button1-id" value="{{option1}}" />
+				<input type="radio" name="answer" id="button2-id" value="{{option2}}" />
+				<label for="button2-id" class="button-answer-{{option2}}"></label>
+				<input type="radio" name="answer" id="button3-id" value="{{option3}}" />
+				<label for="button3-id" class="button-answer-{{option3}}"></label>
 			</p>
 		</div>
 		</script>
@@ -125,6 +125,21 @@
 		</div>
 		</script>
 
+
+		<!-- Dobaveno -->
+		<!-- Experiment Break view -->
+		<script id="break-exp-view" type="x-tmpl-mustache">
+			<div class="view">
+				{{# text }}
+				<section class="text-container">
+					<p class="text">{{ text }}</p>
+				</section>
+				{{/ text }}
+				<button id="next">Continue Experiment</button>
+			</div>
+		</script>
+
+
 		<!-- main view (buttons response) -->
 		<script id="main-view" type="x-tmpl-mustache">
 		<div class="view">
@@ -137,15 +152,38 @@
 		</p>
 
 		<p class="answer-container">
-			<label for="yes" class="button-answer1">{{ option1 }}</label>
-			<input type="radio" name="answer" id="yes" value={{ option1 }} />
-			<input type="radio" name="answer" id="no" value={{ option2 }} />
-			<label for="no" class="button-answer2">{{option2}}</label>
-			<input type="radio" name="answer" id="maybe" value={{ option3 }} />
-			<label for="maybe" class="button-answer3">{{ option3 }}</label>
+			<label for="button4-id" class="button-answer-{{option1}}"></label>
+			<input type="radio" name="answer" id="button4-id" value="{{option1}}" />
+			<input type="radio" name="answer" id="button5-id" value="{{option2}}" />
+			<label for="button5-id" class="button-answer-{{option2}}"></label>
+			<input type="radio" name="answer" id="button6-id" value="{{option3}}" />
+			<label for="button6-id" class="button-answer-{{option3}}"></label>
 		</p>
 
 		</div>
+		</script>
+
+		<!-- Dobaveno -->
+		<!-- main part 2 view (buttons response) -->
+		<script id="mainPart2-view" type="x-tmpl-mustache">
+			<div class="view">
+
+			<p class="question">
+			{{# question }}
+			{{ question }}
+			{{/ question }}
+			</p>
+
+			<p class="answer-container">
+				<label for="button7-id" class="button-answer-{{option1}}"></label>
+				<input type="radio" name="answer" id="button7-id" value="{{option1}}" />
+				<input type="radio" name="answer" id="button8-id" value="{{option2}}" />
+				<label for="button8-id" class="button-answer-{{option2}}"></label>
+				<input type="radio" name="answer" id="button9-id" value="{{option3}}" />
+				<label for="button9-id" class="button-answer-{{option3}}"></label>
+			</p>
+
+			</div>
 		</script>
 
 		<!-- post test view -->
