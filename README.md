@@ -1,5 +1,5 @@
-# King of france experiment
-## Experiment for the course of Experimental Psychology Lab 2018
+# King of France
+Experimental Psychology Lab 2018
 
 blah blah blah...
 
