@@ -164,7 +164,9 @@ var main = {
                 option1: exp.responses[0],
                 option2: exp.responses[1],
                 option3:  exp.responses[2],
-
+                condition: exp.trial_info.main_trials[CT].condition,
+                expectedAnswer: exp.trial_info.main_trials[CT].expectedAnswer,
+                type: exp.trial_info.main_trials[CT].type,
                 option_chosen: $('input[name=answer]:checked').val(),
                 RT: RT
             };
@@ -176,7 +178,7 @@ var main = {
         startingTime = Date.now();
 
     },
-	trials : 81
+	trials : 82
 };
 
 // Dobaveno
@@ -220,7 +222,7 @@ var mainPart2 = {
         // record trial starting time
         startingTime = Date.now();
     },
-    trials : 80
+    trials : 83
 };
 
 
