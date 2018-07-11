@@ -1,3 +1,8 @@
+# King of france experiment
+## Experiment for the course of Experimental Psychology Lab 2018
+
+blah blah blah...
+
 # Minimal example of an online experiment
 
 ## Cloning and running the experiment
