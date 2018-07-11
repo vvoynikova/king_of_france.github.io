@@ -24,35 +24,36 @@ type: "main",
 condition: "4",
 expectedAnswer: "false"},
 
-{sentence: "The King of France isn’t bald.",
+{sentence: "Macron, he called the King of France last night.",
 type: "main",
 condition: "5",
 expectedAnswer: "false"},
 
-{sentence: "The King of France is not on a state visit to Australia this week.",
+{sentence: "The King of France isn’t bald.",
 type: "main",
 condition: "6",
 expectedAnswer: "false"},
 
-{sentence: "The King of France is not married to Brigitte Macron.",
+{sentence: "The King of France is not on a state visit to Australia this week.",
 type: "main",
 condition: "7",
 expectedAnswer: "false"},
 
-{sentence: "The King of France, he did not call Emmanuel Macron last night.",
+{sentence: "The King of France is not married to Brigitte Macron.",
 type: "main",
 condition: "8",
 expectedAnswer: "false"},
 
-{sentence: "Emmanuel Macron, he did not call the King of France last night.",
+{sentence: "The King of France, he did not call Emmanuel Macron last night.",
 type: "main",
 condition: "9",
 expectedAnswer: "false"},
 
-{sentence: "Emmanuel Macron, he called the King of France last night.",
+{sentence: "Emmanuel Macron, he did not call the King of France last night.",
 type: "main",
 condition: "10",
 expectedAnswer: "false"},
+
 
 {sentence: "The Emperor of Canada is fond of sushi.",
 type: "main",
