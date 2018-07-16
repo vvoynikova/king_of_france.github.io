@@ -1,9 +1,12 @@
 # King of France
-Experimental Psychology Lab 2018
+Course: Experimental Psychology Lab SS 2018
 
-blah blah blah...
+This repository is created as part of a group project during the course of Experimental Psychology Lab, SS 2018, University of Osnabrück.  
 
-# Minimal example of an online experiment
+# An online experiment based on the paper:
+Abrusán, M., & Szendroi, K. (2013). Experimenting with the King of France--Topics, verifiability and definite descriptions. Semantics and Pragmatics, 6(10), 1-43.
+
+We replicated the experiment initially conducted by Abrusán et. al (2013) and now present our documentation in this repository. 
 
 ## Cloning and running the experiment
 
