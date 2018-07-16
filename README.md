@@ -49,8 +49,8 @@ git clone https://github.com/mbakharzi/king_of_france
 
 + `Report.html`  - file with the final report of the project
 
-+ README.md
-+ LICENSE
++ `README.md`
++ `LICENSE`
 
 
 
@@ -60,65 +60,18 @@ The experiment begins with a set of instructions, followed by the two parts of w
 
 
 
-For example, the `intro` view of the minimal template looks like this:
-
-```javascript
-var intro = {
-    // introduction title
-    "title": "Welcome!",
-    // introduction text
-    "text": "Thank you for participating in our study. In this study, you will ...",
-    // introduction's slide proceeding button text
-    "buttonText": "Begin experiment",
-    // render function renders the view
-    render: function() {
-        var view = {};
-        view.name = 'intro';
-        view.template = $('#intro-view').html();
-        $('#main').html(Mustache.render(view.template, {
-            title: this.title,
-            text: this.text,
-            button: this.buttonText
-        }));
-
-        // moves to the next view
-        $('#next').on('click', function(e) {
-            exp.findNextView();
-        });
-
-        return view;
-    },
-    // for how many trials should this view be repeated?
-    trials: 1
-}
-```
-
 ## Experiment
 
 The experiment itself is realized as a Javascript object. It contains four keys that are particularly important for customizing your experiment:
 
 + `views` - array of view-objects in the order in which they are to occur
 
-+ `trial_info` - any information the user may wish to specify to realize particular trials (e.g., URLs to pictures, test sentences, ...)
++ `trial_info` - any information the user may wish to specify to realize particular trials (e.g., test sentences)
 
 + `trial_data` - data gathered from each particular trial (this is the main experimental data you collect)
 
 + `global_data` - data that is collected only once, such as MTurk userID, starting time, total experiment time etc.
 
-The sequence of views is defined in `scripts/experiment.js`, for example like so:
-
-``` javascript
-    // specify view order
-    this.views = [intro,
-                  instructionsForcedChoice,
-                  practiceForcedChoice,
-                  beginForcedChoice,
-                  mainForcedChoice,
-                  instructionsSliderRating,
-                  mainSliderRating,
-                  postTest,
-                  thanks];
-```
 
 
 ## Configuration of deployment
