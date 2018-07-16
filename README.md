@@ -3,7 +3,7 @@ Course: Experimental Psychology Lab SS 2018
 
 This repository is created as part of a group project during the course of Experimental Psychology Lab, SS 2018, University of Osnabrück.  
 
-# An online experiment based on the paper:
+## An online experiment based on the paper:
 Abrusán, M., & Szendroi, K. (2013). Experimenting with the King of France--Topics, verifiability and definite descriptions. Semantics and Pragmatics, 6(10), 1-43.
 
 We replicated the experiment initially conducted by Abrusán et. al (2013) and now present our documentation in this repository. 
@@ -12,64 +12,53 @@ We replicated the experiment initially conducted by Abrusán et. al (2013) and n
 
 ```
 # clone the repo, e.g.:
-git clone https://github.com/babe-project/MinimalTemplate
+git clone https://github.com/mbakharzi/king_of_france
 
-# go to 'MinimalTemplate'
+# go to 'king_of_france'
 
 # open 'index.html' in the browser to see the experiment
 ```
 
 ## Documentation
 
-Extensive documentation is provided on the [_babe site](http://babe-project.github.io/babe_site/index.html).
++ All the documentation available is stored and organised in this repository.
+
++ The final report is to be found in the file named `Report.html`.
 
 ## File Organisation
 
-+ `index.html` - starting point; to be loaded in the browser; general structure; user must edit this
++ `index.html` - starting point; to be loaded in the browser
 
-+ `views`/     - file with a collection of views (= block / chunk of related content) of the experiment
++ `views`/     - file with a collection of views of the experiment
 	+ `view.js`            - definition of how individual trials look, which data to collect etc.; main work happens here
 
 + `scripts`/   - files for main functionality
-	+ `experiment.js`       - initializes the experiment (trial structure, input data etc.); user must customize this
-	+ `main.js`             - main functionality to run experiment; usually user will not edit this
-    + `helpers.js`          - helper functions specific to each particular experiment; user might edit this
-	+ `submit_to_server.js` - functions to process, send or store data; user will almost never edit this
+	+ `experiment.js`       - initializes the experiment (trial structure, input data etc.)
+	+ `main.js`             - main functionality to run experiment
+    + `helpers.js`          - helper functions specific to each particular experiment
+	+ `submit_to_server.js` - functions to process, send or store data
 
 + `config`/    - file(s) with user-supplied information
 	+ `config_deploy.js`    - information about how to deploy (=run, collect data for) the experiment
    
-+ `images`       - images shown in this experiment; optional; user usually supplies these
++ `images`       - images shown in this experiment
 
 + `styles/styles.css`  - style files
 
 + `libraries`    - external libraries
 
++ `Report.html`  - file with the final report of the project
+
 + README.md
 + LICENSE
 
-## What the user will usually (not) edit
-
-The main files which must (usually) be edited to program an experiment are: 
-
-+ `index.html`    - provide view-templates
-
-+ `views/view.js` - define how individual trials look, which data to collect etc.
-
-+ `scripts/experiment.js`   - define structure of the experiment (order of blocks, number of trials etc.)
-	
-+ `config/config_deploy.js` - just choose one of several options regarding what to do with the collected data
 
 
 ## Views & trials
 
-A usual experiment consists of a sequence of separable parts, such as instructions, practice trials, main trials etc. These parts are called **views** in _babe, because they correspond loosely to what is visible on the screen. The user can specify any order of views, including repetitions, (this is done in `experiment.js`; see below) and any number of times (=trials) each view should be repeated.
+The experiment begins with a set of instructions, followed by the two parts of which it consists - practice part and main part. In the practice part, participants are given the chance to familiarise themselves with the task. The main part is divided into two block of trials, separated by a pause, the length of which can be decided individually based on individual needs and preferences. Before all trials, subjects are instructed to remain focus and answer as fast and accurate as possible. 
 
-Views are defined in `views/views.js`. Formally a view is an object. It should minimally contain the following keys: 
 
-+ `trials` - a number specifying the number of trials the view should be repeated
-
-+ `render` - a function which updates a view-template, defines how to react to which events and possibly records data
 
 For example, the `intro` view of the minimal template looks like this:
 
