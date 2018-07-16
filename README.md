@@ -49,6 +49,8 @@ git clone https://github.com/mbakharzi/king_of_france
 
 + `Report.html`  - file with the final report of the project
 
++ `Results.csv`  - file with participants' responses; the raw data
+
 + `README.md`
 + `LICENSE`
 
@@ -76,4 +78,6 @@ The experiment itself is realized as a Javascript object. It contains four keys 
 
 ## Configuration of deployment
 
-The deploy configuration file `config_deploy.js` contains **information about how to deploy** (i.e., run, recruit participants & store data) an experiment. Here, we simply use the `debug` mode in which the experiment runs locally in our own browser and outputs the data collected on the last slides as one huge and unstructured blob of text. Other modes of deployment are possible.
+The experiment was deployed via Github Pages. It is accessible via the following link: https://mbakharzi.github.io/king_of_france/. Participants were recruited by directly sending the link to them.
+After the experiment is finished online, the results are stored and retrieved later. A server is needed and made use of in this case. A server instance was deployed with Heroku hosting service. 
+
