@@ -41,8 +41,6 @@ git clone https://github.com/mbakharzi/king_of_france
 + `config`/    - file(s) with user-supplied information
 	+ `config_deploy.js`    - information about how to deploy (=run, collect data for) the experiment
    
-+ `images`       - images shown in this experiment
-
 + `styles/styles.css`  - style files
 
 + `libraries`    - external libraries
@@ -59,21 +57,6 @@ git clone https://github.com/mbakharzi/king_of_france
 ## Views & trials
 
 The experiment begins with a set of instructions, followed by the two parts of which it consists - practice part and main part. In the practice part, participants are given the chance to familiarise themselves with the task. The main part is divided into two block of trials, separated by a pause, the length of which can be decided individually based on individual needs and preferences. Before all trials, subjects are instructed to remain focus and answer as fast and accurate as possible. 
-
-
-
-## Experiment
-
-The experiment itself is realized as a Javascript object. It contains four keys that are particularly important for customizing your experiment:
-
-+ `views` - array of view-objects in the order in which they are to occur
-
-+ `trial_info` - any information the user may wish to specify to realize particular trials (e.g., test sentences)
-
-+ `trial_data` - data gathered from each particular trial (this is the main experimental data you collect)
-
-+ `global_data` - data that is collected only once, such as MTurk userID, starting time, total experiment time etc.
-
 
 
 ## Configuration of deployment
