@@ -47,8 +47,6 @@ git clone https://github.com/mbakharzi/king_of_france
 
 + `Report.html`  - file with the final report of the project
 
-+ `Results.csv`  - file with participants' responses; the raw data
-
 + `README.md`
 + `LICENSE`
 
