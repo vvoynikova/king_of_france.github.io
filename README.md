@@ -23,7 +23,8 @@ git clone https://github.com/mbakharzi/king_of_france
 
 + All the documentation available is stored and organised in this repository.
 
-+ The final report is to be found in the file named `Report.html`.
++ The final report is to be found in the file named `report.html` or online at this address:
+http://htmlpreview.github.io/?https://github.com/mbakharzi/king_of_france/blob/master/report.html
 
 ## File Organisation
 
