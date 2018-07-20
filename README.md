@@ -45,7 +45,7 @@ git clone https://github.com/mbakharzi/king_of_france
 
 + `libraries`    - external libraries
 
-+ `Report.html`  - file with the final report of the project
++ `report.html`  - file with the final report of the project
 
 + `README.md`
 + `LICENSE`
